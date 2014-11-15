@@ -3,6 +3,7 @@
 #include <sstream>
 
 #include "graph.h"
+#include "nest.h"
 
 using namespace std;
 
@@ -44,6 +45,12 @@ int main()
     cout << "\t - edges: " << graph.get_edges().size() << endl;
 
     // 2) Create nests
+    anco::Nest nest(graph);
+    nest.configure();
+    while(true) {
+        nest.run();
+        }
+
     // 3) Learn
     // 4) Do search
     // 5) Print stats

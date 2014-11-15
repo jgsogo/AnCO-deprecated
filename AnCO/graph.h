@@ -1,4 +1,6 @@
 
+#pragma once
+
 #include <vector>
 #include <map>
 
@@ -26,6 +28,9 @@ namespace anco {
         public:
             edge(node& source, node& target);
             ~edge();
+
+            node& get_source() const { return _source;};
+            node& get_target() const { return _target;};
         protected:
             node& _source;
             node& _target;
